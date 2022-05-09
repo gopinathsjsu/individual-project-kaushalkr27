@@ -16,3 +16,20 @@
 #### 4. First run ```mvn compile``` and then ```mvn exec:java -Dexec.mainClass=app.Main```
 #### 5. You will see the output in the bill.txt in ```./src/main/java/app/bills/bill.txt```
 ***
+## Class Diagram:
+![](assets/202-individual-project.jpg)
+***
+## Design Patterns Used:
+#### 1. Factorization
+#### 2. Factory Design
+***
+## Screenshots:
+#### 1. Running the project
+![](assets/run-the-project.png)
+
+#### 2. Sample Input and Output
+![](assets/input-output.png)
+
+#### 3. Sample Input and Output with Edge Case
+![](assets/input-output-edge-case.png)
+
