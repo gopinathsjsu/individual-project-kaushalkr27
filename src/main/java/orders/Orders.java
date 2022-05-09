@@ -18,13 +18,23 @@ public class Orders {
 
         String line = "";
         String splitBy = ",";
+        int lineNumber = 1;
+        String cardNumber = "";
 
         try(BufferedReader br = new BufferedReader(new FileReader(path))){
             List<Item> itemList = new ArrayList<>();
 
             while ((line = br.readLine()) != null){
                 String[] item = line.split(splitBy);
-                orderItems.add(new OrderItem(item[0].trim(), Integer.parseInt(item[1].trim()), item[2].trim()));
+                if(lineNumber!=1){
+                    if(item.length > 2){
+                        orderItems.add(new OrderItem(item[0].trim(), Integer.parseInt(item[1].trim()), item[2].trim()));
+                        cardNumber = item[2].trim();
+                    }else {
+                        orderItems.add(new OrderItem(item[0].trim(), Integer.parseInt(item[1].trim()), cardNumber));
+                    }
+                }
+                lineNumber++;
             }
         }
         catch (IOException e){

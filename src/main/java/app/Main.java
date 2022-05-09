@@ -65,12 +65,22 @@ public class Main {
         for(Map.Entry<String, Double> entry : orderMap.entrySet()) {
             String key = entry.getKey();
             Double value = entry.getValue();
+            if(isOrderCorrect) {
+                totalBill.writeBill("Item, Quantity, Price");
+            }
             if(isOrderCorrect){
                 for(OrderItem item: orderItems){
-                    String out = item.getItem() + ", " + item.getQty();
+                    Item itemVal = miscGoods.get(item.getItem().toLowerCase());
+                    if(itemVal == null){
+                        itemVal = luxuryGoods.get(item.getItem().toLowerCase());
+                    }
+                    if(itemVal == null){
+                        itemVal = essentialsGoods.get(item.getItem().toLowerCase());
+                    }
+                    String out = item.getItem() + ", " + item.getQty() + ", " + itemVal.getPrice();
                     totalBill.writeBill(String.format(out));
                 }
-                totalBill.writeBill(String.format("Amount paid, %s", value));
+                totalBill.writeBill(String.format("Total Price: %s", value));
             }
             // do what you have to do here
             // In your case, another loop.
