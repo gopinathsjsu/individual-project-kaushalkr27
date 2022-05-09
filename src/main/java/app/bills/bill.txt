@@ -1,1 +1,10 @@
 
+Out of permissible limit for the item chocolates
+Please correct quantities.
+Out of permissible limit for the item chocolates
+Please correct quantities.
+Shampoo, 2
+Chocolates, 1
+Wallet, 1
+pen, 1
+Amount paid, 126.0

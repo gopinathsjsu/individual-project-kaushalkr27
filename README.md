@@ -3,9 +3,16 @@
 ### Name: Kaushal Karinaga Shetter Raju
 ### Student ID: 015721238
 ***
+## Files:
+#### 1. Output file: ```src/main/java/app/bills/bill.txt```
+#### 2. Input file(order): ```src/main/java/orders/ordercsv/orders.csv```
+#### 3. Inverntory stock: ```src/main/java/inventory/stockdb/stocks.csv```
+#### 4. Card Deatils: ```src/main/java/app/bills/cardDetails.csv```
+***
 ## Instructions to run the project:
 #### 1. Open terminal window in your system (Mac/Windows/Linux).
 #### 2. Type ```git clone https://github.com/gopinathsjsu/individual-project-kaushalkr27.git``` in the terminal window.
-#### 3. Drag and drop this cloned app to your intelliJ workspace.
-#### 4. The main() method for this app is located in and click on the play button --OR-- from the command line.
-#### 5. Once the program is running you will be prompted to Enter an Input file name, here you will have to write the name of the input csv file.
+#### 3. Navigate into the root of the project directory by running ```cd individual-project-kaushalkr27```
+#### 4. First run ```mvn compile``` and then ```mvn exec:java -Dexec.mainClass=app.Main```
+#### 5. You will see the output in the bill.txt in ```./src/main/java/app/bills/bill.txt```
+***
